@@ -14,7 +14,7 @@ entries:
     name: hive-metastore
     type: application
     urls:
-    - https://khwj.github.io/data-platform-charts/.deploy/hive-metastore-0.1.2.tgz
+    - https://github.com/khwj/data-platform-charts/releases/download/hive-metastore-0.1.2/hive-metastore-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 3.0.0
@@ -29,7 +29,7 @@ entries:
     name: hive-metastore
     type: application
     urls:
-    - https://khwj.github.io/data-platform-charts/.deploy/hive-metastore-0.1.1.tgz
+    - https://github.com/khwj/data-platform-charts/releases/download/hive-metastore-0.1.1/hive-metastore-0.1.1.tgz
     version: 0.1.1
   spark-history-server:
   - apiVersion: v2
@@ -40,6 +40,6 @@ entries:
     name: spark-history-server
     type: application
     urls:
-    - https://khwj.github.io/data-platform-charts/.deploy/spark-history-server-0.1.0.tgz
+    - https://github.com/khwj/data-platform-charts/releases/download/spark-history-server-0.1.0/spark-history-server-0.1.0.tgz
     version: 0.1.0
 generated: "2022-01-27T09:18:17.967928+07:00"
