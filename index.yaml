@@ -3,7 +3,22 @@ entries:
   hive-metastore:
   - apiVersion: v2
     appVersion: 3.0.0
-    created: "2022-01-27T07:26:38.136763+07:00"
+    created: "2022-01-27T09:18:17.977636+07:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.15.1
+    description: A Helm chart for Hive Standalone Metastore
+    digest: d3d30a31af74c359187cb1b4d2dace8787605d110c6bddf189554094deac6b90
+    name: hive-metastore
+    type: application
+    urls:
+    - https://khwj.github.io/data-platform-charts/.deploy/hive-metastore-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2022-01-27T09:18:17.972616+07:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -14,17 +29,17 @@ entries:
     name: hive-metastore
     type: application
     urls:
-    - https://github.com/khwj/data-platform-charts/releases/download/hive-metastore-0.1.1/hive-metastore-0.1.1.tgz
+    - https://khwj.github.io/data-platform-charts/.deploy/hive-metastore-0.1.1.tgz
     version: 0.1.1
   spark-history-server:
   - apiVersion: v2
     appVersion: 3.1.2
-    created: "2022-01-27T07:26:38.137383+07:00"
+    created: "2022-01-27T09:18:17.978172+07:00"
     description: A Helm chart for Spark History Server
     digest: cef04ebef26b2a8dad329572a09b4f2417a0b133873db9f04d26ac42748e50c0
     name: spark-history-server
     type: application
     urls:
-    - https://github.com/khwj/data-platform-charts/releases/download/spark-history-server-0.1.0/spark-history-server-0.1.0.tgz
+    - https://khwj.github.io/data-platform-charts/.deploy/spark-history-server-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-27T07:26:38.13128+07:00"
+generated: "2022-01-27T09:18:17.967928+07:00"
