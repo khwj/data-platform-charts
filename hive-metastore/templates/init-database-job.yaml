@@ -62,12 +62,12 @@ spec:
           - name: AWS_ACCESS_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.existingSecret }}
+                name: {{ .Values.warehouse.existingSecret }}
                 key: AWS_ACCESS_KEY
           - name: AWS_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.existingSecret }}
+                name: {{ .Values.warehouse.existingSecret }}
                 key: AWS_SECRET_KEY
         volumeMounts:
           - name: config-templates
@@ -79,7 +79,11 @@ spec:
         - name: run-init-db
           image: {{ template "hiveMetastoreImage" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.initDatabaseJob.initSchema }}
           command: ["sh", "-c", "/opt/hive-metastore/bin/schematool -dbType postgres -initSchema --verbose"]
+          {{- else if not (.Values.initDatabaseJob.initSchema) }}
+          command: ["sh", "-c", "/opt/hive-metastore/bin/schematool -dbType postgres -upgradeSchema --verbose"]
+          {{- end }}
           resources:
 {{ toYaml .Values.initDatabaseJob.resources | indent 12 }}
           volumeMounts:

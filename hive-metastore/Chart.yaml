@@ -2,7 +2,7 @@ apiVersion: v2
 name: hive-metastore
 description: A Helm chart for Hive Standalone Metastore
 type: application
-version: 0.1.1
+version: 0.1.2
 appVersion: "3.0.0"
 dependencies:
   - name: postgresql

@@ -54,12 +54,12 @@ spec:
           - name: AWS_ACCESS_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.existingSecret }}
+                name: {{ .Values.warehouse.existingSecret }}
                 key: AWS_ACCESS_KEY
           - name: AWS_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.existingSecret }}
+                name: {{ .Values.warehouse.existingSecret }}
                 key: AWS_SECRET_KEY
         volumeMounts:
           - name: config-templates

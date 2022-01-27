@@ -12,6 +12,7 @@ image:
   pullSecrets: []
 
 remoteMetastore:
+  existingSecret: ""
   connectionUrl: ""
   username: ""
   password: ""
@@ -50,6 +51,8 @@ ingress:
 
 # Remote Metastore initialization job settings
 initDatabaseJob:
+  # If true, initialize remote metastore (which will give error if the database is already initialized).
+  initSchema: true
   # When not set, the values defined in the global securityContext will be used
   securityContext: {}
   #  runAsUser: 50000
